@@ -28,25 +28,21 @@ pip install pynput cryptography
 1. Generate Encryption Key
 Run once to create key.key:
 
-bash
-Copy
-Edit
+```bash
 python generate_key.py
+```
 2. Start Logging
 Run the keylogger:
 
-bash
-Copy
-Edit
+```bash
 python keylogger.py
+```
 ✅ Press ESC to stop logging.
 
 ## 🔓 Decrypting Logs
 To view the contents of the encrypted logs:
 
-python
-Copy
-Edit
+```python
 from cryptography.fernet import Fernet
 
 with open("key.key", "rb") as key_file:
@@ -58,6 +54,7 @@ with open("keylog.enc", "rb") as log_file:
     for line in log_file:
         decrypted = fernet.decrypt(line.strip())
         print(decrypted.decode())
+```
 ## 📁 Files
 generate_key.py – Creates and saves the encryption key
 
