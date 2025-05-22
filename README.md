@@ -23,7 +23,8 @@ This project is a simple **keylogger with encrypted logging** functionality buil
 Install dependencies:
 ```bash
 pip install pynput cryptography
-🚀 How to Run
+```
+##🚀 How to Run
 1. Generate Encryption Key
 Run once to create key.key:
 
@@ -40,7 +41,7 @@ Edit
 python keylogger.py
 ✅ Press ESC to stop logging.
 
-🔓 Decrypting Logs
+##🔓 Decrypting Logs
 To view the contents of the encrypted logs:
 
 python
@@ -57,7 +58,7 @@ with open("keylog.enc", "rb") as log_file:
     for line in log_file:
         decrypted = fernet.decrypt(line.strip())
         print(decrypted.decode())
-📁 Files
+##📁 Files
 generate_key.py – Creates and saves the encryption key
 
 keylogger.py – Main script that logs and encrypts keystrokes
@@ -66,7 +67,7 @@ key.key – Generated key file (keep this secret!)
 
 keylog.enc – Encrypted keystroke log file
 
-✅ Educational Value
+##✅ Educational Value
 This project helps you practice:
 
 Keyboard event capture
@@ -77,5 +78,5 @@ Working with external libraries
 
 Understanding file I/O and encryption
 
-🔐 Disclaimer
+##🔐 Disclaimer
 This tool is strictly for learning purposes. Using keyloggers in any malicious or unauthorized way is unethical and illegal in many jurisdictions.
